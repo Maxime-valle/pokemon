@@ -1,0 +1,18 @@
+{
+    "pokemon": [
+        {
+            "nom": "Doexys",
+            "points_de_vie": 100,
+            "attaque": 25
+        },
+        {
+            "nom": "Giratina",
+            "points_de_vie": 120,
+            "attaque": 20
+        }
+    ],
+    "combat": {
+        "pokemon1": "Doexys",
+        "pokemon2": "Giratina"
+    }
+}

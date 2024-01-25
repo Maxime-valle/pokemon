@@ -5,13 +5,13 @@ import pygame_gui
 import cv2
 
 
-#  classe pour le bouton personnalisé
+
 class ImageButton(pygame.sprite.Sprite):
     def __init__(self, image_path, position, size=(100, 100), rotation_angle=-5):  # l'angle de rotation
         super().__init__()
         self.image = pygame.image.load(image_path)
         self.image = pygame.transform.scale(self.image, size)  # R
-        self.image = pygame.transform.rotate(self.image, rotation_angle)  # Rotation 
+        self.image = pygame.transform.rotate(self.image, rotation_angle)  # R 
         self.rect = self.image.get_rect()
         self.rect.center = position  # Centrer le bouton
 
@@ -27,14 +27,14 @@ pygame.init()
 largeur_fenetre, hauteur_fenetre = 800, 800 
 fenetre = pygame.display.set_mode((largeur_fenetre, hauteur_fenetre))
 
-# pygame_gui
+
 gestionnaire = pygame_gui.UIManager((largeur_fenetre, hauteur_fenetre))
 
-# Bouton
+
 button_size = (150,150)  
 button = ImageButton('img55/bouton1.png', (largeur_fenetre//2, hauteur_fenetre//2 -250), button_size)  # Déplacer l'image légèrement vers le haut
 
-# fond ecran opencv
+#  opencv
 chemin_video = os.path.join('img55/Menu55.mp4')
 cap = cv2.VideoCapture(chemin_video)
 
@@ -62,14 +62,14 @@ while en_cours:
 
     gestionnaire.update(delta_temps)
 
-    # Frame de la vidéo avec OpenCV
+    # Frame de la vidéo  OpenCV
     ret, frame = cap.read()
     if not ret:
         # revenir au début
         cap.set(cv2.CAP_PROP_POS_FRAMES, 0)
         continue
 
-    #  pivoter l'image
+
     frame = cv2.rotate(frame, cv2.ROTATE_90_COUNTERCLOCKWISE)
 
     # Redimensionner l'image à la taille de la fenêtre Pygame
@@ -85,7 +85,7 @@ while en_cours:
 
     gestionnaire.draw_ui(fenetre)
     pygame.display.update()
-
-#  les ressources
+    
+    
 cap.release()
 cv2.destroyAllWindows()

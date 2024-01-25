@@ -1,6 +1,6 @@
 import pygame
 
-class tool:
+class Tool:
     @staticmethod
-    def split_image(spritesheet: pygame.surface, x: int, y: int, width: int, height: int):
+    def split_image(spritesheet, x, y, width, height):
         return spritesheet.subsurface(pygame.Rect(x, y, width, height))

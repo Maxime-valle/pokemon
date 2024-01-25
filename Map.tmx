@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="50" height="50" tilewidth="16" tileheight="16" infinite="0" nextlayerid="3" nextobjectid="1">
  <tileset firstgid="1" source="m1/tileset_pokemon_sdk.tsx"/>
- <layer id="2" name="grounds" width="50" height="50">
+ <layer id="2" name="grounds" width="50" height="50" locked="1">
   <data encoding="csv">
 9,682,690,690,690,690,690,682,690,690,682,682,690,690,690,690,690,690,690,690,690,690,690,682,682,682,701,0,4251,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,
 17,690,698,698,698,698,698,690,698,698,690,690,698,698,698,698,698,698,698,698,698,698,698,690,690,690,701,0,4250,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,4238,
