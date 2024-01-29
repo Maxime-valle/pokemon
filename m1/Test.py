@@ -3,7 +3,7 @@ import sys
 import os
 import pygame_gui
 import cv2
-
+from Menu import Menu
 
 
 class ImageButton(pygame.sprite.Sprite):
@@ -13,7 +13,7 @@ class ImageButton(pygame.sprite.Sprite):
         self.image = pygame.transform.scale(self.image, size)  # R
         self.image = pygame.transform.rotate(self.image, rotation_angle)  # R 
         self.rect = self.image.get_rect()
-        self.rect.center = position  # Centrer le bouton
+        self.rect.center = position  # C
 
     def is_clicked(self, event):
         if event.type == pygame.MOUSEBUTTONDOWN:
@@ -32,7 +32,7 @@ gestionnaire = pygame_gui.UIManager((largeur_fenetre, hauteur_fenetre))
 
 
 button_size = (150,150)  
-button = ImageButton('img55/bouton1.png', (largeur_fenetre//2, hauteur_fenetre//2 -250), button_size)  # Déplacer l'image légèrement vers le haut
+button = ImageButton('img55/bouton1.png', (largeur_fenetre//2, hauteur_fenetre//2 -250), button_size)  
 
 #  opencv
 chemin_video = os.path.join('img55/Menu55.mp4')

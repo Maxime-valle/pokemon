@@ -24,3 +24,4 @@ class GameMap:
     def update(self):
         self.group.update()
         self.group.draw(self.screen.get_display())
+
